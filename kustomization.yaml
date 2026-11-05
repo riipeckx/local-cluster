@@ -1,0 +1,4 @@
+resources:
+  - cert-manager/issuer.yaml
+  - kgateway/shared-gw.yaml
+  - webapp-color/
