@@ -1,0 +1,11 @@
+resources:
+  - namespace.yaml
+  - https://raw.githubusercontent.com/kgateway-dev/kgateway/refs/tags/v2.4.3/install/helm/kgateway-crds/templates/gateway.kgateway.dev_backendconfigpolicies.yaml
+  - https://raw.githubusercontent.com/kgateway-dev/kgateway/refs/tags/v2.4.3/install/helm/kgateway-crds/templates/gateway.kgateway.dev_backends.yaml
+  - https://raw.githubusercontent.com/kgateway-dev/kgateway/refs/tags/v2.4.3/install/helm/kgateway-crds/templates/gateway.kgateway.dev_directresponses.yaml
+  - https://raw.githubusercontent.com/kgateway-dev/kgateway/refs/tags/v2.4.3/install/helm/kgateway-crds/templates/gateway.kgateway.dev_gatewayextensions.yaml
+  - https://raw.githubusercontent.com/kgateway-dev/kgateway/refs/tags/v2.4.3/install/helm/kgateway-crds/templates/gateway.kgateway.dev_gatewayparameters.yaml
+  - https://raw.githubusercontent.com/kgateway-dev/kgateway/refs/tags/v2.4.3/install/helm/kgateway-crds/templates/gateway.kgateway.dev_httplistenerpolicies.yaml
+  - https://raw.githubusercontent.com/kgateway-dev/kgateway/refs/tags/v2.4.3/install/helm/kgateway-crds/templates/gateway.kgateway.dev_listenerpolicies.yaml
+  - https://raw.githubusercontent.com/kgateway-dev/kgateway/refs/tags/v2.4.3/install/helm/kgateway-crds/templates/gateway.kgateway.dev_trafficpolicies.yaml
+  - install.yaml
