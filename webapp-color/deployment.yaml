@@ -22,7 +22,7 @@ spec:
             - containerPort: 8080
           env:
             - name: APP_COLOR
-              value: purple
+              value: blue
           resources:
             requests:
               cpu: 20m
