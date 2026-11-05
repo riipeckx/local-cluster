@@ -1,0 +1,77 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: cilium-config
+  namespace: kube-system
+data:
+  identity-allocation-mode: crd
+  identity-heartbeat-timeout: "30m0s"
+  identity-gc-interval: "15m0s"
+  cilium-endpoint-gc-interval: "5m0s"
+  nodes-gc-interval: "5m0s"
+  identity-management-mode: "agent"
+
+  debug: "false"
+  enable-policy: "default"
+  enable-k8s-networkpolicy: "true"
+  enable-non-default-deny-policies: "true"
+  policy-default-local-cluster: "true"
+  policy-deny-response: "none"
+  enable-policy-secrets-sync: "true"
+  policy-secrets-only-from-secrets-namespace: "true"
+  policy-secrets-namespace: "cilium-secrets"
+
+  enable-ipv4: "true"
+  enable-ipv6: "false"
+  enable-ipv4-masquerade: "true"
+  enable-ipv6-masquerade: "true"
+  enable-masquerade-to-route-source: "false"
+
+  cluster-name: "kind-k8s-local"
+  cluster-id: "0"
+  ipam: "kubernetes"
+  ipam-cilium-node-update-rate: "15s"
+  routing-mode: "tunnel"
+  tunnel-protocol: "vxlan"
+  datapath-mode: "veth"
+  enable-tcx: "true"
+
+  kube-proxy-replacement: "true"
+  enable-node-ipam: "true"
+  default-lb-service-ipam: "nodeipam"
+  enable-lb-ipam: "false"
+  service-no-backend-response: "reject"
+  enable-no-service-endpoints-routable: "true"
+  enable-health-check-nodeport: "true"
+  node-port-bind-protection: "true"
+  enable-auto-protect-node-port-range: "true"
+
+  enable-l7-proxy: "false"
+  external-envoy-proxy: "false"
+  enable-hubble: "false"
+
+  custom-cni-conf: "false"
+  write-cni-conf-when-ready: /host/etc/cni/net.d/05-cilium.conflist
+  cni-exclusive: "true"
+  cni-log-file: "/var/run/cilium/cilium-cni.log"
+
+  bpf-root: "/sys/fs/bpf"
+  cgroup-root: "/run/cilium/cgroupv2"
+  procfs: "/host/proc"
+  preallocate-bpf-maps: "false"
+  bpf-map-dynamic-size-ratio: "0.0025"
+  bpf-policy-map-max: "16384"
+  bpf-policy-stats-map-max: "65536"
+  bpf-lb-map-max: "65536"
+
+  enable-endpoint-health-checking: "true"
+  enable-health-checking: "true"
+  synchronize-k8s-nodes: "true"
+  remove-cilium-node-taints: "true"
+  set-cilium-node-taints: "true"
+  set-cilium-is-up-condition: "true"
+  agent-not-ready-taint-key: "node.cilium.io/agent-not-ready"
+  unmanaged-pod-watcher-interval: "15s"
+  operator-api-serve-addr: "127.0.0.1:9234"
+  operator-prometheus-serve-addr: ":9963"
+  enable-metrics: "true"
