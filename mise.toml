@@ -9,7 +9,7 @@ CTX = "kind-k8s-local"
 
 [tasks.apply]
 description = "Apply root Kustomize manifests"
-run = 'kustomize build . | kubectl --context "$CTX" apply --server-side -f -'
+run = 'kustomize build . | kubectl --context "$CTX" apply -f -'
 
 [tasks.down]
 description = "Delete local Kind cluster"
